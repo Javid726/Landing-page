@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 6rem;
+  background-color: #fff;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 4rem;
+}
+
+.logo p {
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  color: #5f5f79;
+  font-weight: 400;
+}
+
+.dropdown-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 60rem;
+}
+
+.dropdown-menu ul li {
+  display: inline-block;
+  margin-right: 8rem;
+  position: relative;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: #5f5f79;
+  font-size: 1.8rem;
+}
+
+/* Dropdown */
+.dropdown-menu ul li ul {
+  display: none;
+  width: 25rem;
+}
+
+.dropdown-menu ul li:hover ul {
+  list-style-type: none;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 25rem;
+}
+
+.dropdown-menu ul li ul li {
+  display: block;
+  background-color: #eee;
+  padding: 1rem 0 1rem 1rem;
+  margin-left: -1rem;
+}
+
+.dropdown-menu ul li ul li a {
+  color: #5f5f79;
+}
+
+/* Main area */
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+
+.laptop-text {
+  padding: 10rem 0;
+}
+
+.laptop-text h1 {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.laptop-text p {
+  font-size: 2rem;
+  color: #585772;
+  margin-bottom: 6rem;
+}
+
+.laptop-pic {
+  margin: 2rem 6rem 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.laptop-pic #matebook {
+  display: inline-block;
+  width: 40rem;
+  filter: drop-shadow(0px 5px 3px #000);
+  animation: drop 1.5s ease;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.dots img {
+  margin-right: 2.5rem;
+}
+
+.dots img:last-child {
+  margin-right: 0;
+}
+
+.btn-light {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 4rem;
+  border: 2px solid #c433cc;
+  color: #c433cc;
+  margin-right: 2.5rem;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.btn-dark {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 4rem;
+  color: #fff;
+  background-color: #c433cc;
+  border: 1px solid #c433cc;
+  outline: none;
+  cursor: pointer;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.5;
+  height: 80%;
+}
+
+.medium-circle {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  z-index: -1;
+  height: 60%;
+  opacity: 0.4;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  z-index: -1;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding-bottom: 0;
+    overflow: auto;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .laptop-text {
+    padding: 1.5rem 0;
+  }
+
+  .laptop-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .laptop-text p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .laptop-pic {
+    margin: 1rem 6rem 2rem 0;
+  }
+
+  .laptop-pic #matebook {
+    display: inline-block;
+    width: 25rem;
+    filter: drop-shadow(0px 5px 3px #000);
+    animation: drop 1.5s ease;
+  }
+
+  .dots {
+    margin: 0 2rem;
+  }
+
+  .small-circle,
+  .medium-circle,
+  .big-circle {
+    opacity: 0.3;
+  }
+}
